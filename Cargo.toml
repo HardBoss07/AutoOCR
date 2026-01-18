@@ -1,0 +1,13 @@
+[package]
+name = "auto-ocr"
+version = "0.1.0"
+edition = "2024"
+authors = ["Matteo Bosshard | HardBoss07 | M4tt3o"]
+description = "Get your OCR from images in your Clipboard with a simple key combination"
+repository = "https://github.com/HardBoss07/AutoOCR"
+license = "MIT"
+keywords = ["macros", "ocr"]
+categories = ["command-line-utilities", "development-tools::debugging"]
+readme = "README.md"
+
+[dependencies]
