@@ -117,9 +117,15 @@ fn perform_ocr(img: &ImageData, path: &PathBuf) -> Option<String> {
 }
 
 fn load_icon() -> Icon {
-    let image = image::open("assets/favicon.ico")
-        .expect("Make sure assets/favicon.ico exists")
+    let mut icon_path = std::env::current_exe().unwrap();
+    icon_path.pop();
+    icon_path.push("favicon.ico"); // Expecting icon in the same folder as EXE
+
+    let image = image::open(&icon_path)
+        .or_else(|_| image::open("assets/favicon.ico")) // Fallback for dev
+        .expect("Failed to find favicon.ico")
         .into_rgba8();
+    
     let (width, height) = image.dimensions();
     let rgba = image.into_raw();
     Icon::from_rgba(rgba, width, height).expect("Failed to load icon")
