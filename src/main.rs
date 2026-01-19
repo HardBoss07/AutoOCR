@@ -50,8 +50,6 @@ fn main() {
                 && keys.contains(&Keycode::O)
             {
                 if let Ok(image) = clipboard.get_image() {
-                    notify("AutoOCR", "Processing image...");
-
                     if let Some(text) = perform_ocr(&image, &tessdata_path) {
                         let cleaned = text.trim().to_string();
                         if !cleaned.is_empty() {
