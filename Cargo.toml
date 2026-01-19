@@ -11,3 +11,8 @@ categories = ["command-line-utilities", "development-tools::debugging"]
 readme = "README.md"
 
 [dependencies]
+arboard = "3.6.1"
+device_query = "4.0.1"
+image = "0.25.9"
+leptess = "0.14.0"
+tray-icon = "0.21.3"

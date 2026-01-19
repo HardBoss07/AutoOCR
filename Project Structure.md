@@ -13,6 +13,8 @@
 ├── src/
 │   └── main.rs
 ├── wix/
+│   ├── License.rtf
+│   └── main.wxs
 ├── Cargo.lock
 ├── Cargo.toml
 ├── LICENSE
